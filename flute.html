@@ -1,0 +1,229 @@
+<?php
+session_start();
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flute | Music</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+        <style>
+            .nv2 a {
+                position: relative;
+                left: 4%;
+            }
+        </style>
+    </head>
+    <?php
+$email=$_SESSION['email'];
+if($email==true){
+
+}
+else{
+    header('location:login.html');
+}
+?>
+
+        <body>
+            <header>
+                <img src="image/Musical-PNG-HD-Photo.png" alt="music">
+                <img id="i1" src="image/Musical-PNG-HD-Photo.png" alt="music">
+                <div class="sign">
+                    <input class="search" type="search" placeholder="Favorite Instrument ......" style="letter-spacing: 2px; font-weight:600; ">
+                    <a href="logout.php"><input class="sign1" type="submit" value="Log-Out"></a>
+                    <a href="mycart.php">
+                        <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" stroke="100" colors="primary:#b4b4b4,secondary:#6c16c7">
+                        </lord-icon>
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li class="a1"><a href="music_home.html">Home</a></li>
+                        <li class="a1"><a href="#instument">Instruments</a>
+                            <div class="submenu" style="margin-left: 30px;">
+                                <ul>
+                                    <li><a href="guitar.html">Guitar</a></li>
+                                    <li><a href="violin.html">Violin</a></li>
+                                    <li><a href="piano.html">Piano</a></li>
+                                    <li><a href="flute.html">Flute</a></li>
+                                    <li><a href="trumpet.html">Trumpet</a></li>
+                                    <li><a href="sitar.html">Sitar</a></li>
+                                    <li><a href="tabla.html">Tabla</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="a1"><a href="music_home.html#review">Reviews</a></li>
+                        <li><a href="music_home.html#about">About us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="section">
+                <div class="nv2">
+                    <img src="image/flute background.jpg" alt="">
+                    <p class="txt">Flute</p>
+                    <p class="txt11">Turn up the music, turn down the stress</p>
+                    <input class="btn" id="order" type="submit" onclick="order()" value="Order Now">
+                    <a href="#Concert Flute">Concert Flute </a>
+                    <a href="#Piccolo">Piccolo</a>
+                    <a href="#Alto Flute">Alto Flute</a>
+                    <a href="#Irish Flute">Irish Flute</a>
+                    <a href="#Bamboo Flute">Bamboo Flute</a>
+                </div>
+                <form action="cart.php" method="post">
+                    <div class="contant" id="Concert Flute">
+                        <img src="image/concert_flute.jpg" alt="Concert Flute">
+                        <p class="txt">Concert Flute</p>
+                        <p class="txt1"> This is the most common type of flute and is used in orchestral and band music. It has a range of three octaves and is made of silver, gold, or other metals. </p>
+                        <p class="txt2">₹ 2999/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord1" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord2" trigger="hover"></lord-icon>
+                        <div class="cart" style="margin-left: -80px ;" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Concert Flute">
+                        <input type="hidden" name="Product_price" value="2999">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant1" id="Piccolo">
+                        <img src="image/piccolo.jpg" alt="Piccolo">
+                        <p class="txt">Piccolo</p>
+                        <p class="txt1"> This is a smaller version of the concert flute and has a higher pitch. It's often used in military bands and orchestral music.</p>
+                        <p class="txt2">₹ 3899/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord3" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord4" trigger="hover"></lord-icon>
+                        <div class="cart" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Piccolo">
+                        <input type="hidden" name="Product_price" value="3899">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant" id="Alto Flute">
+                        <img src="image/Alto_flute_006.jpg" alt="Alto Flute">
+                        <p class="txt">Alto Flute</p>
+                        <p class="txt1"> This type of flute is larger than the concert flute and has a lower pitch. It's often used in orchestral music and jazz.</p>
+                        <p class="txt2">₹ 7799/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord1" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord2" trigger="hover"></lord-icon>
+                        <div class="cart" style="margin-left:-80px" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Alto Flute">
+                        <input type="hidden" name="Product_price" value="7799">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant1" id="Irish Flute">
+                        <img src="image/irish fkute.jpg" alt="Irish Flute">
+                        <p class="txt">Irish Flute</p>
+                        <p class="txt1">This is a type of wooden flute used in traditional Irish music. It has a unique and distinctive sound.</p>
+                        <p class="txt2">₹ 8399/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord3" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord4" trigger="hover"></lord-icon>
+                        <div class="cart" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Irish Flute">
+                        <input type="hidden" name="Product_price" value="8399">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant" id="Bamboo Flute">
+                        <img src="image/bamboo flute.jpg" alt="Bamboo Flute">
+                        <p class="txt">Bamboo Flute</p>
+                        <p class="txt1">This is an older type of keyboard instrument that predates the piano. It has a unique sound and is often used in Baroque and early classical music.</p>
+                        <p class="txt2">₹ 9799/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord1" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord2" trigger="hover"></lord-icon>
+                        <div class="cart" style="margin-left:-80px" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Bamboo Flute">
+                        <input type="hidden" name="Product_price" value="9799">
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <div class="foot1">
+                    <div class="foot2">
+                        <img src="image/award.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">India's #1</div>
+                            <div class="tx2">Instruments Capital</div>
+                        </div>
+                        <img src="image/disk.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">Instrument</div>
+                            <div class="tx2">Large collection </div>
+                        </div>
+                        <img src="image/our moto.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">Moto</div>
+                            <div class="tx2">Music Sprade</div>
+                        </div>
+                        <img src="image/247.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">24/7</div>
+                            <div class="tx2">Customer Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot3">
+                    <div class="info">
+                        <div class="info1">Information</div>
+                        <div class="info2">About Us</div>
+                        <div class="info2">Privacy Policy</div>
+                        <div class="info2">Warranty</div>
+                        <div class="info2">Find my Product</div>
+                        <div class="info2">Reward Points</div>
+                    </div>
+                    <div class="info">
+                        <div class="info1">Our Company</div>
+                        <div class="info2">Photo Gallery</div>
+                        <div class="info2">Blog</div>
+                    </div>
+                    <div class="info" id="contact">
+                        <div class="info1">Customer Service</div>
+                        <div class="info2">Contact</div>
+                        <div class="info2">FAQs</div>
+                        <div class="info2">Shipping Policy</div>
+                        <div class="info2">Refund Policy</div>
+                        <div class="info2">Cancellation Policy</div>
+                        <div class="info2">Track Order</div>
+                    </div>
+                </div>
+                <div class="foot4">
+                    <div class="info3">© 2023 HarmonyHQ Pvt. Ltd</div>
+                    <span class="info4">Connect :</span>
+                    <span class="icons">
+                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+            </span>
+                </div>
+            </footer>
+            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+            <script src="music.js"></script>
+        </body>
+
+    </html>

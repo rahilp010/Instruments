@@ -1,0 +1,251 @@
+<?php
+session_start();
+?>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music | Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    </head>
+
+    <?php
+        $email=$_SESSION['email'];
+        if($email==true){
+        }
+        else{
+            header('location:login.html');
+        }
+        ?>
+
+        <body>
+            <header>
+                <img src="image/Musical-PNG-HD-Photo.png" alt="music">
+                <img id="i1" src="image/Musical-PNG-HD-Photo.png" alt="music">
+                <div class="sign">
+                    <input class="search" type="search" placeholder="Favorite Instrument ......" style="letter-spacing: 2px; font-weight:600; ">
+                    <a href="logout.php"><input class="sign1" type="submit" value="Log-Out"></a>
+                    <a href="mycart.php">
+                        <lord-icon src=" https://cdn.lordicon.com/slkvcfos.json " stroke="100 " colors="primary:#b4b4b4,secondary:#6c16c7 ">
+                        </lord-icon>
+                    </a>
+
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li class="a1"><a href="#">Home</a></li>
+                        <li class="a1"><a href="#instument">Instruments</a>
+                            <div class="submenu" style="margin-left: 30px; ">
+                                <ul>
+                                    <li><a href="guitar.html">Guitar</a></li>
+                                    <li><a href="violin.html">Violin</a></li>
+                                    <li><a href="piano.html">Piano</a></li>
+                                    <li><a href="flute.html">Flute</a></li>
+                                    <li><a href="trumpet.html">Trumpet</a></li>
+                                    <li><a href="sitar.html">Sitar</a></li>
+                                    <li><a href="tabla.html">Tabla</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="a1"><a href="#review">Reviews</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="componet">
+                <img src="image/images (1).jpeg" alt="music" class="im1">
+                <p class="logo">
+                    HarmonyHaven
+                </p>
+                <img src="image/piano background.jpg" alt="music" class="im1">
+                <img src="image/guitar background.jpg" alt="music" class="im1">
+            </div>
+
+            <div class="componet1" id="instument">
+                <div class="section1">
+                    <p class="txt">
+                        Instruments Which you Like...
+                    </p>
+                    <div class="box">
+                        <a href="guitar.html"><img class="imp1" src="image/guitar.jpeg" alt="guitar "></a>
+                        <p class="txt2">Guitar</p>
+                        <p class="txt3">₹ 4799/-</p>
+                    </div>
+                    <div class="box">
+                        <a href="violin.html"><img class="imp1" src="image/violin.jpg" alt="violin "></a>
+                        <p class="txt2">Violin</p>
+                        <p class="txt3">₹ 5299/-</p>
+                    </div>
+                    <div class="box">
+                        <a href="piano.html"><img class="imp1" src="image/piano.jpg" alt="piano "></a>
+                        <p class="txt2">Piano</p>
+                        <p class="txt3">₹ 7399/-</p>
+                    </div>
+                    <div class="box">
+                        <a href="trumpet.html"><img class="imp1" src="image/trumpet.jpg" alt="trumpet "></a>
+                        <p class="txt2">Trumpet</p>
+                        <p class="txt3">₹ 4099/-</p>
+                    </div>
+                    <div class="box">
+                        <a href="sitar.html"><img class="imp1" src="image/sitar.jpg" alt="sitar "></a>
+                        <p class="txt2">Sitar</p>
+                        <p class="txt3">₹ 5599/-</p>
+                    </div>
+                    <div class="box">
+                        <a href="flute.html"><img class="imp1" src="image/flute.jpg" alt="flute "></a>
+                        <p class="txt2">Flute</p>
+                        <p class="txt3">₹ 3999/-</p>
+                    </div>
+                    <div class="box">
+                        <a href="tabla.html"><img class="imp1" src="image/tabla.jpg" alt="tabla"></a>
+                        <p class="txt2">Tabla</p>
+                        <p class="txt3">₹ 4499/-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="componet2">
+                <div class="section2">
+                    <img src="image/music effect.png" alt="music" style="position: absolute; right:15% ">
+                    <p class="txt4">Impact Of Music...</p>
+                    <p class="txt5"> “You have to take a deep breath, and allow the music to flow through you. Revel in it, allow yourself to awe. When you play, allow the music to break your heart with its beauty.” – Kelly White</p>
+                </div>
+            </div>
+
+            <div class="componet4">
+                <div class="section4" id="review">
+                    <p class="txt4" style="margin-bottom: 80px">Reviews</p>
+                    <div class="box1">
+                        <form action="review.php" method="post">
+                            <label class="us1">UserName :</label><br><br>
+                            <input class="us2" type="text" name="uname" required><br>
+                            <label class="us1">Rating :</label><br><br>
+                            <input class="us2" type="number" name="rating" min="1" max="5" required><br>
+                            <label class="us1">Review :</label><br><br>
+                            <textarea class="us2" name="feedback" cols="35" rows="5" required></textarea>
+                            <input class="bt" type="submit" value="Add Review">
+                        </form>
+                    </div>
+                    <div class="box2">
+                        <form action="review_1.php">
+                            <div class="r1">
+                                <p class="r2">rahilp704</p>
+                                <p class="r3">I am glad to hear that you had a positive experience with a website that provided high-quality instruments. It always important to purchase instruments from reputable sources to ensure that you are getting the best possible
+                                    quality.
+                                </p>
+                            </div>
+                            <div class="r1">
+                                <p class="r2">rinkaltank048</p>
+                                <p class="r3">I will been playing the piano for many years and recently upgraded to a grand piano. The sound is incredible, and the touch is perfect. It is a joy to play, and I will noticed a significant improvement in my playing since
+                                    I started using it. It is an investment, but it was worth every penny.
+                                </p>
+                            </div>
+                            <a href="review_1.php"><input id="bt" type="submit" value="Show more Reviews"></a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="componet3">
+                <div class="section3" id="about">
+                    <p class="txt4" style="margin-bottom:60px ;">About us...</p>
+                    <div class="m1">
+
+                        <ul class="txt6">
+                            <div class="m2">
+                                <lord-icon src="https://cdn.lordicon.com/xqndcrvb.json" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                                </lord-icon>
+                            </div>
+                            <li>We are a team of passionate musicians who are dedicated to helping people find their perfect instrument.</li>
+                            <li>Our goal is to provide high-quality instruments at affordable prices, and to provide exceptional customer service to everyone who visits our site.</li>
+                        </ul>
+                        <ul class="txt6">
+                            <li>We understand the importance of having the right instrument, whether you are a beginner or an experienced musician. That's why we offer a wide variety of instruments to suit every level and style of playing. </li>
+                            <li>From guitars and pianos to drums and sitar instruments, we have something for everyone.</li>
+                        </ul>
+                        <ul class="txt6">
+                            <li>We understand the importance of having the right instrument, whether you are a beginner or an experienced musician. That's why we offer a wide variety of instruments to suit every level and style of playing. </li>
+                            <li>From guitars and pianos to drums and sitar instruments, we have something for everyone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="foot1">
+                    <div class="foot2">
+                        <img src="image/award.png" alt=" ">
+                        <div class="c1">
+                            <div class="tx1">India's #1</div>
+                            <div class="tx2">Instruments Capital</div>
+                        </div>
+                        <img src="image/disk.png" alt=" ">
+                        <div class="c1">
+                            <div class="tx1">Instrument</div>
+                            <div class="tx2">Large collection </div>
+                        </div>
+                        <img src="image/our moto.png" alt=" ">
+                        <div class="c1">
+                            <div class="tx1">Moto</div>
+                            <div class="tx2">Music Sprade</div>
+                        </div>
+                        <img src="image/247.png" alt=" ">
+                        <div class="c1">
+                            <div class="tx1">24/7</div>
+                            <div class="tx2">Customer Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot3">
+                    <div class="info">
+                        <div class="info1">Information</div>
+                        <div class="info2">About Us</div>
+                        <div class="info2">Privacy Policy</div>
+                        <div class="info2">Warranty</div>
+                        <div class="info2">Find my Product</div>
+                        <div class="info2">Reward Points</div>
+                    </div>
+                    <div class="info">
+                        <div class="info1">Our Company</div>
+                        <div class="info2">Photo Gallery</div>
+                        <div class="info2">Blog</div>
+                    </div>
+                    <div class="info" id="contact">
+                        <div class="info1">Customer Service</div>
+                        <div class="info2">Contact</div>
+                        <div class="info2">FAQs</div>
+                        <div class="info2">Shipping Policy</div>
+                        <div class="info2">Refund Policy</div>
+                        <div class="info2">Cancellation Policy</div>
+                        <div class="info2">Track Order</div>
+                    </div>
+                </div>
+                <div class="foot4">
+                    <div class="info3">© 2023 HarmonyHQ Pvt. Ltd</div>
+                    <span class="info4">Connect :</span>
+                    <span class="icons">
+                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+            </span>
+                </div>
+
+            </footer>
+            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+            <script src="script1.js"></script>
+        </body>
+
+    </html>

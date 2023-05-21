@@ -1,0 +1,256 @@
+<?php
+session_start();
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Music</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <style>
+            body {
+                zoom: 80%;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            
+            section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 40px;
+            }
+            
+            .fbox {
+                position: relative;
+                width: 1200px;
+                height: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                background: rgba(250, 169, 254, 0.297);
+                opacity: 75%;
+            }
+            
+            .fvalue {
+                position: relative;
+                left: 300px;
+            }
+            
+            h2 {
+                font-size: 35px;
+                text-align: center;
+                position: relative;
+                font-family: serif;
+                top: -20px;
+                font-style: oblique;
+            }
+            
+            .inputbox {
+                position: relative;
+                margin: 30px 0px;
+                width: 310px;
+                border-bottom: 1px solid black;
+            }
+            
+            .inputbox label {
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translateY(-50%);
+                font-size: 15px;
+                transition: 0.5s;
+                font-weight: 700;
+            }
+            
+            .inputbox input {
+                width: 100%;
+                height: 50px;
+                border: none;
+                outline: none;
+                font-size: 15px;
+                padding: 0 35px 0 5px;
+                background: transparent;
+                font-weight: 700;
+            }
+            
+            .inputbox i {
+                position: absolute;
+                right: 8px;
+                font-size: 17px;
+                top: 20px;
+            }
+            
+            input:focus~label,
+            input:valid~label {
+                top: -5px;
+            }
+            
+            .forget {
+                margin: -15px 0 15px;
+                font-size: 15px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: 14px;
+                font-weight: 700;
+            }
+            
+            .forget a {
+                color: blue;
+                text-decoration: none;
+                font-weight: 700;
+            }
+            
+            .forget a:hover {
+                text-decoration: underline;
+            }
+            
+            #button {
+                width: 100%;
+                height: 50px;
+                border-radius: 40px;
+                background-color: rgb(255, 0, 0);
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 17px;
+                font-weight: 700;
+                color: white;
+                position: relative;
+                top: 25px;
+                font-style: oblique;
+            }
+            
+            #button:hover {
+                background-color: rgb(255, 66, 66);
+            }
+            
+            .register {
+                font-size: 15px;
+                text-align: center;
+                margin: 25px 0 10px;
+                position: relative;
+                top: 20px;
+                font-weight: 700;
+            }
+            
+            .register p a {
+                text-decoration: none;
+                font-weight: 700;
+            }
+            
+            .register p a:hover {
+                text-decoration: underline;
+                font-weight: 900;
+            }
+            
+            .home a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                font-weight: 700;
+                color: blue;
+                position: relative;
+                text-decoration: none;
+                top: 10px;
+            }
+            
+            .home a:hover {
+                text-decoration: underline;
+            }
+            
+            .txt1 {
+                position: absolute;
+                left: 7%;
+                margin-top: -200px;
+                font-size: 37px;
+                font-weight: 700;
+                font-family: 'Great Vibes', cursive;
+            }
+            
+            .txt2 {
+                position: absolute;
+                left: 7%;
+                margin-top: -100px;
+                font-size: 35px;
+                font-weight: 700;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            
+            .txt3 {
+                position: absolute;
+                left: 20%;
+                margin-top: -60px;
+                font-size: 35px;
+                font-weight: 700;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="image/music backgaround.jpg" alt="" srcset="">
+        <section>
+            <div class="fbox">
+                <div class="txt">
+                    <p class="txt1">HarmonyHaven</p>
+                    <p class="txt2">Welcome to the</p>
+                    <p class="txt3">World of Music.</p>
+                </div>
+                <div class="fvalue">
+                    <form action="register.php" method="post">
+                        <h2>Registration</h2>
+                        <div class="inputbox">
+                            <i class="fa-duotone fa-user" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                            <input type="text" name="uname" id="uname" required>
+                            <label for="">UserName</label>
+                        </div>
+                        <div class="inputbox">
+                            <i class="fa-duotone fa-phone" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                            <input type="text" name="phone1" id="phone" required maxlength="10">
+                            <label for="">PhoneNo</label>
+                        </div>
+                        <div class="inputbox">
+                            <i class="fa-duotone fa-envelope" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                            <input type="email" name="email" id="email" required autocomplete="off">
+                            <label for="">Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <i class="fa-duotone fa-lock" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                            <input type="password" name="password" id="password" required>
+                            <label for="">Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for=""><input type="checkbox" name="remember_me" id="remember_me">Remember Me</label>
+                        </div>
+                        <input id="button" type="submit" value="Register">
+                        <div class="register">
+                            <p>Have a Account ?<a href="login.html" style="margin-left: 10px;">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+
+    </html>

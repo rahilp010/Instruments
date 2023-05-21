@@ -1,0 +1,208 @@
+body {
+    zoom: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
+
+.fbox {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background: rgba(250, 169, 254, 0.297);
+    opacity: 75%;
+}
+
+.fvalue {
+    position: relative;
+    left: 300px;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    top: -20px;
+    font-style: oblique;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0px;
+    width: 310px;
+    border-bottom: 1px solid black;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+.inputbox input {
+    width: 88%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 35px 0 5px;
+    background: transparent;
+    font-weight: 700;
+}
+
+.inputbox i {
+    position: absolute;
+    right: 8px;
+    font-size: 17px;
+    top: 20px;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 14px;
+    font-weight: 700;
+}
+
+.forget a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+#button {
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    top: 25px;
+    font-style: oblique;
+}
+
+#button:hover {
+    background-color: rgb(255, 66, 66);
+}
+
+.register {
+    font-size: 15px;
+    text-align: center;
+    margin: 25px 0 10px;
+    position: relative;
+    top: 20px;
+    font-weight: 700;
+}
+
+.register p a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.home a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: blue;
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+}
+
+.home a:hover {
+    text-decoration: underline;
+}
+
+.txt1 {
+    position: absolute;
+    left: 7%;
+    margin-top: -200px;
+    font-size: 37px;
+    font-weight: 700;
+    font-family: 'Great Vibes', cursive;
+}
+
+.txt2 {
+    position: absolute;
+    left: 7%;
+    margin-top: -100px;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.txt3 {
+    position: absolute;
+    left: 20%;
+    margin-top: -60px;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.txt4 {
+    position: absolute;
+    left: 7%;
+    margin-top: 250px;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    text-decoration: line-through;
+}
+
+lord-icon {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 535px;
+    left: 16%;
+}

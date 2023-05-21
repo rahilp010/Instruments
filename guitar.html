@@ -1,0 +1,208 @@
+<?php
+session_start();
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guitar | Music</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    </head>
+
+    <?php
+$email=$_SESSION['email'];
+if($email==true){
+
+}
+else{
+    header('location:login.html');
+}
+?>
+
+        <body>
+            <header>
+                <img src="image/Musical-PNG-HD-Photo.png" alt="music">
+                <img id="i1" src="image/Musical-PNG-HD-Photo.png" alt="music">
+                <div class="sign">
+                    <input class="search" type="search" placeholder="Favorite Instrument ......" style="letter-spacing: 2px; font-weight:600; ">
+                    <a href="logout.php"><input class="sign1" type="submit" value="Log-Out"></a>
+                    <a href="mycart.php">
+                        <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" stroke="100" colors="primary:#b4b4b4,secondary:#6c16c7">
+                        </lord-icon>
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li class="a1"><a href="music_home.html">Home</a></li>
+                        <li class="a1"><a href="#instument">Instruments</a>
+                            <div class="submenu" style="margin-left: 30px;">
+                                <ul>
+                                    <li><a href="guitar.html">Guitar</a></li>
+                                    <li><a href="violin.html">Violin</a></li>
+                                    <li><a href="piano.html">Piano</a></li>
+                                    <li><a href="flute.html">Flute</a></li>
+                                    <li><a href="trumpet.html">Trumpet</a></li>
+                                    <li><a href="sitar.html">Sitar</a></li>
+                                    <li><a href="tabla.html">Tabla</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="a1"><a href="music_home.html">Review</a></li>
+                        <li><a href="music_home.html">About us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="extra"></div>
+            </header>
+
+            <div class="section">
+                <div class="nv1">
+                    <img src="image/guitar background.jpg" alt="">
+                    <p class="txt">Guitar</p>
+                    <p class="txt11">Tune In To Your Dreams</p>
+                    <input class="btn" id="order" type="submit" onclick="order()" value="Order Now">
+                    <a href="#classical">Classical Guitar </a>
+                    <a href="#bass">Bass Guitar</a>
+                    <a href="#electric">Electric Guitar</a>
+                    <a href="#double-neck">Double-neck Guitar</a>
+                </div>
+                <form action="cart.php" method="post">
+                    <div class="contant" id="classical">
+                        <img src="image/classical guitar.jpg" alt="classical guitar">
+                        <p class="txt">Classical Guitar</p>
+                        <p class="txt1"> It is often used for classical music, flamenco, and folk music. It has a warm and mellow tone and is usually played with the fingers.</p>
+                        <p class="txt2">₹ 5799/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord1" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord2" trigger="hover"></lord-icon>
+                        <div class="cart" style="margin-left: -80px;" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Classical Guitar">
+                        <input type="hidden" name="Product_price" value="5799">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant1" id="electric">
+                        <img src="image/electric guitar.jpeg" alt="electric guitar">
+                        <p class="txt">Electric Guitar</p>
+                        <p class="txt1">It can have various effects like distortion, reverb, delay, etc. It is used for genres like rock, metal, jazz, pop, and more. It is usually played with a pick.</p>
+                        <p class="txt2">₹ 6399/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord3" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord4" trigger="hover"></lord-icon>
+                        <div class="cart" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Electic Guitar">
+                        <input type="hidden" name="Product_price" value="6399">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant" id="bass">
+                        <img src="image/bass guitar.jpg" alt="bass guitar">
+                        <p class="txt">Bass Guitar</p>
+                        <p class="txt1"> It has a longer neck and thicker strings than a regular guitar and is played by plucking or strumming the strings with your fingers or a pick.</p>
+                        <p class="txt2">₹ 5999/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord1" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord2" trigger="hover"></lord-icon>
+                        <div class="cart" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Bass Guitar">
+                        <input type="hidden" name="Product_price" value="5999">
+                    </div>
+                </form>
+                <form action="cart.php" method="post">
+                    <div class="contant1" id="double-neck">
+                        <img src="image/Double-neck guitar.jpg" alt="Double-neak guitar">
+                        <p class="txt">Double-neck Guitar</p>
+                        <p class="txt1"> They exist in both electric and acoustic versions and are used by musicians who want to play different types of guitars without having to switch instruments.</p>
+                        <p class="txt2">₹ 8699/-</p>
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" class="lord3" trigger="hover" colors="primary:#121331,secondary:#08a88a">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hlywgxmy.json" class="lord4" trigger="hover"></lord-icon>
+                        <div class="cart" onclick="AddCart()">
+                            <input class="txt1" type="submit" value="Add to Cart" name="ADD_TO_CART">
+                        </div>
+                        <input type="hidden" name="Product_name" value="Double-neck Guitar">
+                        <input type="hidden" name="Product_price" value="8699">
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <div class="foot1">
+                    <div class="foot2">
+                        <img src="image/award.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">India's #1</div>
+                            <div class="tx2">Instruments Capital</div>
+                        </div>
+                        <img src="image/disk.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">Instrument</div>
+                            <div class="tx2">Large collection </div>
+                        </div>
+                        <img src="image/our moto.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">Moto</div>
+                            <div class="tx2">Music Sprade</div>
+                        </div>
+                        <img src="image/247.png" alt="">
+                        <div class="c1">
+                            <div class="tx1">24/7</div>
+                            <div class="tx2">Customer Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot3">
+                    <div class="info">
+                        <div class="info1">Information</div>
+                        <div class="info2">About Us</div>
+                        <div class="info2">Privacy Policy</div>
+                        <div class="info2">Warranty</div>
+                        <div class="info2">Find my Product</div>
+                        <div class="info2">Reward Points</div>
+                    </div>
+                    <div class="info">
+                        <div class="info1">Our Company</div>
+                        <div class="info2">Photo Gallery</div>
+                        <div class="info2">Blog</div>
+                    </div>
+                    <div class="info" id="contact">
+                        <div class="info1">Customer Service</div>
+                        <div class="info2">Contact</div>
+                        <div class="info2">FAQs</div>
+                        <div class="info2">Shipping Policy</div>
+                        <div class="info2">Refund Policy</div>
+                        <div class="info2">Cancellation Policy</div>
+                        <div class="info2">Track Order</div>
+                    </div>
+                </div>
+                <div class="foot4">
+                    <div class="info3">© 2023 HarmonyHQ Pvt. Ltd</div>
+                    <span class="info4">Connect :</span>
+                    <span class="icons">
+                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+            </span>
+                </div>
+            </footer>
+            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+            <script src="music.js"></script>
+
+        </body>
+
+    </html>
