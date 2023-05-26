@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
     padding: 20px;
@@ -9,6 +13,19 @@ body {
     position: relative;
     border: 1px solid #bfbfbf;
     border-radius: 20px;
+}
+
+.container2 {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    height: 510px;
+    position: relative;
+    border: 1px solid #bfbfbf;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -62,13 +79,17 @@ table {
 }
 
 .contant1 {
-    border: 1px solid;
-    width: 20%;
-    height: 300px;
-    border-radius: 10px;
+    border: 1px solid red;
+    width: 15%;
+    height: 35%;
     position: absolute;
-    top: 100px;
-    right: 40px;
+    border-radius: 50%;
+    top: 23%;
+    right: 3%;
+    background-image: url(image/flute\ background.jpg);
+    opacity: 90%;
+    background-size: contain;
+    box-shadow: 10px 10px 5px 2px #bfbfbf;
 }
 
 .txt1 {
@@ -76,25 +97,33 @@ table {
     font-weight: bold;
     font-style: oblique;
     text-indent: 20px;
-}
-
-.sign {
-    position: absolute;
-    font-size: 24px;
-    top: 45px;
-    border-bottom: 1px solid;
-    width: 150px;
-    right: 10px;
+    position: relative;
+    left: 11%;
+    top: 5%;
+    color: red;
 }
 
 .txt2 {
     font-size: 21px;
+    font-weight: bolder;
+    font-style: oblique;
+    float: right;
+    position: relative;
+    border-bottom: 1px solid;
+    left: -35%;
+    color: red;
+    top: -7%;
+}
+
+.txt3 {
+    font-size: 14px;
     font-weight: 600;
     font-style: oblique;
     float: right;
     position: relative;
-    top: -27px;
-    right: 20px;
+    left: -1%;
+    top: 20%;
+    color: red;
 }
 
 .contant1 .payment {
@@ -190,7 +219,7 @@ table {
 .r51 input {
     position: absolute;
     top: 90px;
-    right: 200px;
+    right: 90px;
     width: 10%;
     height: 30px;
     background-color: rgb(0, 200, 255);
@@ -206,25 +235,6 @@ table {
     background-color: rgb(104, 207, 251);
 }
 
-.part {
-    margin: 0;
-    padding: 0;
-}
-
-.part1 {
-    border: 1px solid;
-    width: 20.78%;
-    height: 567px;
-    display: inline-flex;
-}
-
-.part2 {
-    border: 1px solid;
-    width: 79%;
-    height: 567px;
-    float: right;
-}
-
 .logo {
     position: relative;
     width: 72%;
@@ -253,15 +263,6 @@ table {
     padding: 10px;
 }
 
-.compo1 {
-    width: 100%;
-    height: 100%;
-    background-image: url(image/198612190_l_normal_none.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: -100px;
-}
-
 hr {
     width: 75%;
     border-radius: 2px;
@@ -269,123 +270,82 @@ hr {
     background-color: black;
 }
 
-.m1 {
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgba(122, 120, 120, 0.767);
-    border-radius: 20px;
-    padding: 10px;
-    width: 52%;
-    font-family: serif;
-    font-variant: small-caps;
-    color: white;
+.f12 {
+    border: 1px solid #ccc;
+    width: 80%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 30px;
     position: relative;
-    left: 20%;
+    top: 0%;
 }
 
-.delete {
+.f12 input {
+    position: relative;
+    top: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid;
+    width: 40%;
+    float: left;
+}
+
+label {
+    font-weight: 700;
+    float: left;
+}
+
+textarea {
+    position: relative;
+    top: 60px;
+    left: -7.5%;
+    border-radius: 7px;
+}
+
+.pay {
+    position: absolute;
+    top: 4%;
+    font-style: oblique;
+    font-size: 27px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+#gpay {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    width: 5%;
+    height: 17px;
+}
+
+#gpay1 {
+    position: absolute;
+    top: 63%;
+    left: 49%;
+    width: 5%;
+    height: 17px;
+}
+
+#pay1 {
+    position: absolute;
+    top: 83%;
+    left: 29%;
+    font-weight: bold;
+    color: white;
     background-color: red;
-    padding: 8px;
-    color: white;
+}
+
+#pay1 {
+    position: absolute;
+    top: 83%;
+    left: 29%;
     font-weight: bold;
-    width: 100%;
-    border: 1px solid red;
-    border-radius: 10px;
-}
-
-.part {
-    margin: 0;
-    padding: 0;
-}
-
-.part1 {
-    border: 1px solid;
-    width: 20.78%;
-    height: 567px;
-    display: inline-flex;
-}
-
-.part2 {
-    border: 1px solid;
-    width: 79%;
-    height: 567px;
-    float: right;
-}
-
-.logo {
-    position: relative;
-    width: 72%;
-    font-family: 'Great Vibes', cursive;
-    background-color: rgba(122, 120, 120, 0.683);
-    border-radius: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    top: 0px;
-    left: 8%;
-    padding: 10px;
-    animation: fadeIn 5s;
-}
-
-.logo2 {
-    position: relative;
-    width: 18%;
-    font-family: 'Great Vibes', cursive;
-    background-color: rgba(122, 120, 120, 0.683);
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    top: -20px;
-    left: 35%;
     color: white;
-    padding: 10px;
+    background-color: red;
 }
 
-.compo1 {
-    width: 100%;
-    height: 100%;
-    background-image: url(image/198612190_l_normal_none.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: -100px;
-}
-
-hr {
-    width: 75%;
-    border-radius: 2px;
-    height: 2px;
-    background-color: black;
-}
-
-.m1 {
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgba(122, 120, 120, 0.767);
-    border-radius: 20px;
-    padding: 10px;
-    width: 52%;
-    font-family: serif;
-    font-variant: small-caps;
-    color: white;
-    position: relative;
-    left: 20%;
-}
-
-.compo3 {
-    margin: 40px;
-    position: relative;
-    top: 40px;
-}
-
-table,
-tr,
-th,
-td {
-    padding: 15px;
-    border-collapse: collapse;
-}
-
-.tr1 {
-    background-color: black;
-    color: white;
-    font-weight: bold;
+#pay1:hover {
+    background-color: rgb(248, 138, 138);
+    cursor: pointer;
 }

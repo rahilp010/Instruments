@@ -26,11 +26,12 @@ else{
 }
 ?>
 <body>
-    <div class="container">
+    <div class="container" style=" margin-bottom: 29px;">
         <h1>Musical Cart</h1>
         <div class="contant">
             <table style=''>
                 <tr>
+                <th>Sr.NO</th>
                 <th>Product</th>
                 <th>Price</th>
                 <th></th>
@@ -41,9 +42,11 @@ else{
                 {
                     foreach($_SESSION['cart'] as $key => $value)
                     {
+                        $sr=$key+1;
                         $total=$total + $value['Product_price'];
                         echo 
                         "<tr style='text-align:center'>
+                        <td>$sr</td>
                         <td style='border:1px solid ; padding: 15px;'>$value[Product_name]</td>
                         <td style='border:1px solid;'>$value[Product_price]</td>
                         <td><form action='cart.php' method='post'>
@@ -57,17 +60,37 @@ else{
                 ?>
             </table>
         </div>
+        <a href="#payment1">
             <div class="contant1">
-                <p class="txt1">Total :</p>
-                <p class="sign">₹</p>
-                <p class="txt2"><?php echo $total ?></p>
-                <form action="">
-                <p class="method"><input type="radio"  name="delivery" id="d1" required>Cash on Delivery</p>
-                <p class="method"><input type="radio"  name="delivery" id="d2" required>UPI/GPay/Paytm </p>
-                </form>
-                <input type="submit" class="payment" value="Make Payment" id="payment" onclick="payment()">
-                
+                <p class="txt1">Total Cost</p>
+                <p class="txt2"><?php echo"₹";echo $total ?></p>
+                <p class="txt3">Tap to Pay</p>
             </div>
+        </a>
+    </div>
+    <div class="container2" id="payment1">
+        <p class="pay">Payment GateWay</p>
+        <form class="f12" action="payment.php" method="post">
+            <label for="">Your Product :</label><br>
+            <input type="text" name="ProductName" value="<?php  foreach($_SESSION['cart'] as $key => $value)
+                    {
+                        echo $value['Product_name'];echo', ';
+                        }?>"
+            >
+            <label for="" style="position:relative;top:-20px;left:70px;">PhoneNo :</label>
+            <input type="text" name="PhoneNo" required pattern="[0-9]{10}" maxlength="10">
+            <label for="" style=" position: relative;top: 30px;">Address :</label><br>
+            <textarea name="Address" id="address" cols="44" rows="5" required></textarea>
+            <span>
+            <input type="radio" name="PaymentMethod" id="gpay" value="Gpay" required><span style="margin-left:5%;">UPI/</span>
+            <i class="fa-brands fa-google-pay fa-2xl" style="color: #4b5677;"></i>
+            </span>
+            <span>
+            <input type="radio" name="PaymentMethod" id="gpay1" value="Cash on Delivery" required><span style="margin-left:-9.5%;position:relative;top:16%;">Cash On Delivery</span>
+            <i class="fa-duotone fa-person-carry-box fa-xl" style="margin-left:1%;position:relative;top:16%;"></i>
+            </span>
+            <input id="pay1" type="submit" value="Payment">
+        </form>
     </div>
     <script src="music.js"></script>
 </body>

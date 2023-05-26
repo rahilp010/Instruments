@@ -1,4 +1,5 @@
 <?php
+session_start();
 $UserName = $_POST['UserName'];
 $password = $_POST['password'];
 $conn =mysqli_connect("localhost","root","")or die ("error");
@@ -10,6 +11,7 @@ $number1=mysqli_num_rows($result1);
 if($number1==1){
    echo "<script>
    alert('successfully Login');
+   window.location.assign('admin.php');
    </script>"
    ;
 }

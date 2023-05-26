@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             }
             else{
             $count=count($_SESSION['cart']);
-            $_SESSION['cart'][$count]=array('Product_name' => $_POST['Product_name'],'Product_price'=>$_POST['Product_price']);
+            $_SESSION['cart'][$count]=array('Product_name' => $_POST['Product_name'],'Product_price'=>$_POST['Product_price'],'Quantity'=>1);
             echo "<script> 
             alert('Product Added');
             window.location.assign('music_home.html');
@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         }
         else
         {
-            $_SESSION['cart'][0]=array('Product_name' => $_POST['Product_name'],'Product_price'=>$_POST['Product_price']);
+            $_SESSION['cart'][0]=array('Product_name' => $_POST['Product_name'],'Product_price'=>$_POST['Product_price'],'Quantity'=>1);
             echo "<script> 
             alert('Product Added');
             window.location.assign('music_home.html');

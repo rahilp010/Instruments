@@ -62,7 +62,7 @@ else{
             <p class="r21"><?php echo $result['uname'] ?></p>
             <p class="r31"><?php echo $result['feedback'] ?></p>
             <p class="r61"><?php echo 'Rating : ';echo $result['rating'];echo'/5' ?></p>
-            <a href="delete.php?id=<?php echo $result['id'] ?>" class="r41"><input type="submit" value="Delete"></a>
+            
             <a href="update.php?id=<?php echo $result['id']; ?>" class="r51"><input type="submit" value="Update"></a>
             </div>
             <?php
